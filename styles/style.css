@@ -26,9 +26,7 @@ nav {
     justify-content: center;
    
 }
-@media (min-width: ) { 
-    
-}
+
 .row h2 {
     margin-bottom: 2rem;
     text-align: left;
@@ -49,13 +47,19 @@ nav {
     height: 100%;
     background-size: cover
 }
-form {
-    padding: 3rem;
+.shadow {
     box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+}
+.vidrio {
     background: rgba(255, 255, 255, 0.20);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+form {
+    padding: 3rem;
+    
+    
 }
