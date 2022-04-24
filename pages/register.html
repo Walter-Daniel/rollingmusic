@@ -38,36 +38,52 @@
         </div>
       </nav>
       <main>
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 login-flex">
-                      
-                    <form class="shadow vidrio">
+          <div class="container-fluid bg">
+                  <div class="container-register">
+                    <div class="login-flex">
+                      <form class="shadow vidrio">
                         <h2>Registrate</h2>
                         <div class="mb-3 login-form">
-                          <label for="exampleInputEmail1" class="form-label">Correo Electrónico:</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          
+                          <label for="firstName" class="form-label">Nombre(s):</label>
+                          <input type="text" class="form-control" id="firstName" value="Mark" name="firstName" maxlength="20" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="surname" class="form-label">Apellido(s):</label>
+                          <input type="text" class="form-control" id="surname" name="surname" value="Otto" maxlength="20" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="mb-3 login-form">
+                          <label for="email" class="form-label">Correo Electrónico:</label>
+                          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
                           <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <div class="d-grid gap-2">
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Confirmar contraseña:</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="d-grid py-3">
                           
-                          <button type="submit" class="btn btn-primary">Entrar</button>
+                          <button type="submit" class="btn btn-rm">Enviar</button>
                         </div>
                         <div class="my-3">
-                            <span>No tienes cuenta? <a href="#">Regístrate</a> </span> <br />
-                            <span><a href="#" data-bs-toggle="modal"
-                              data-bs-target="#passwordModal">Recuperar Contraseña</a></span>
+                            <span>Ya te encuentras registrado? <a href="/pages/login.html">Inicia Sesíon</a> </span>
+                            
                           </div>
                       </form>
+                    </div>
                   </div>
-              </div>
+              
           </div>
       </main>
-      <footer></footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+    
