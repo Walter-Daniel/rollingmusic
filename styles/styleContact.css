@@ -28,9 +28,9 @@
     margin-bottom: 1rem;
     margin-top: -3.8rem;
 }
-.form-check .form-check-input {
-    margin-left: -0.5rem;
-    margin-right: 0.5rem;
+.contact-check-input {
+    position: relative;
+    top: -23px;
 }
 .button-contact button{
     width: 6rem;
@@ -49,4 +49,18 @@
 .maps > iframe {
     width: 100%;
     border-radius: 0.5rem;
+}
+/* .whatsapp-float {
+    position: fixed;
+    bottom: 2.5rem;
+} */
+@media (max-width: 600px) { 
+    .contact-check-label {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .contact-check-input {
+        position: relative;
+        top: 0px;
+    }
 }
