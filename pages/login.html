@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+  <!-- Inicio del Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
@@ -36,36 +37,63 @@
             
           </div>
         </div>
-      </nav>
+    </nav>
+    <!-- Final del Navbar -->
       <main>
           <div class="container-fluid bg">
                   <div class="container-login">
                     <div class="login-flex">
-                      <form class="shadow vidrio">
+                      <form class="shadow vidrio needs-validation" id="formLogin" novalidate>
                         <h2>Iniciar Sesión</h2>
                           <div class="mb-3 login-form">
-                            <label for="email" class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="email" name="email" maxlength="30" required>
-                            
+                            <label for="emailLogin" class="form-label">Correo Electrónico:</label>
+                            <input type="emailLogin" class="form-control" id="emailLogin" name="emailLogin" maxlength="30" required>
+                            <!-- mensaje de validación -->
+                          <div class="invalid-feedback"> Por favor, complete este campo.</div>
                           </div>
-                          <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="password" name="password" minlength="6" maxlength="9" required>
+                          <div class="mb-3 login-form">
+                            <label for="passwordLogin" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" minlength="6" maxlength="9" required>
+                            <!-- mensaje de validación -->
+                            <div class="invalid-feedback"> Por favor, complete este campo.</div>
                           </div>
-                          <div class="d-grid py-3">
-                            <button type="submit" class="btn btn-rm shadow">Entrar</button>
+                          <span id="loginError"></span>
+                          <div class="d-grid py-3 login-form">
+                            <button type="submit" class="btn btn-principal shadow">Entrar</button>
                           </div>
-                          <div class="my-3">
+                          <div class="my-3 link-form">
                               <span>No tienes cuenta? <a href="/pages/register.html">Regístrate</a> </span> <br />
                               <span><a href="#" data-bs-toggle="modal"
                                 data-bs-target="#passwordModal">Recuperar Contraseña</a></span>
                           </div>
-                      </form>
+                       </form>
                     </div>
-                  </div>
-              
+                  </div> 
           </div>
       </main>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+      </script>
+      <script src="/js/login.js"></script>
 </body>
 </html>
