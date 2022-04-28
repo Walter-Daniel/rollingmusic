@@ -13,57 +13,57 @@
   <script src="/js/contact.js" defer></script>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-        </ul>
-
+<body class="body-contact">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
   <main>
     <div class="container-fluid contact-container">
       <div class="row">
-        <div class="col-sm-12 col-md-8 contact-flex">
+        <div class="col-sm-12 col-md-11 col-lg-8 contact-flex">
           <form class="contact-form" id="contactForm">
             <h2 class="mb-3">Contacto</h2>
             <div class="contact-fullname mb-3 d-flex">
               <div class="me-1">
-                <label for="name-contact" class="form-label">Nombre:</label>
+                <label for="name-contact" class="form-label">Nombre(s):</label>
                 <input name="name" type="text" class="form-control" id="name-contact" minlength="3" maxlength="20"
                   autofocus required>
               </div>
               <div class="ms-1">
-                <label for="surname-contact" class="form-label">Apellido:</label>
+                <label for="surname-contact" class="form-label">Apellido(s):</label>
                 <input name="surname" type="text" class="form-control" id="surname-contact" minlength="3" maxlength="20"
                   required>
               </div>
             </div>
             <div class="contact-info mb-3 d-flex">
               <div class="contact-email me-1">
-                <label for="email-contact" class="form-label">Email:</label>
+                <label for="email-contact" class="form-label">Correo Electrónico:</label>
                 <input name="email" type="email" class="form-control" id="email-contact" required>
               </div>
               <div class="ms-1">
@@ -71,8 +71,8 @@
                 <textarea name="message" class="form-control" id="message-contact" rows="3" minlength="5" maxlength="100" required></textarea>
               </div>
             </div>
-            <div class="bases row">
-              <div class="col-6 mb-0 form-check">
+            <div class="bases">
+              <div class="mb-0 form-check">
                 <input class="contact-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                 <label class="contact-check-label" for="flexCheckDefault">
                   <p class="mb-0">Estoy de acuerdo con las</p>
@@ -84,14 +84,14 @@
               <div class="py-3 ms-3">
                 <button type="submit" class="btn btn-rm" id="sendContact">Enviar</button>
               </div>
-              <div class="py-3">
+              <div class="py-3 ms-3">
                 <button type="submit" class="btn btn-light" id="cancelContact">Cancelar</button>
               </div>
             </div>
             <div class="text-light" id="messageSent"></div>
           </form>
         </div>
-        <div class="col-sm-12 col-md-8 mt-3 contact-flex maps max-width: 100%">
+        <div class="col-sm-12 col-md-11 col-lg-8 my-3 contact-flex maps max-width: 100%">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1110630309827!2d-65.20901848529603!3d-26.836419596489353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c0ef228d361%3A0x4d1117d0b408680d!2sGral.%20Paz%20546%2C%20T4000BLL%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1650847029789!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- <a href="https://wa.link/ifrn79" class="whatsapp-float">
@@ -100,8 +100,10 @@
       </div>
     </div>
   </main>
-  <footer>
-
+  <footer class="bg-primary">
+    <div >
+      FOOTER DE MI PAGINA
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
