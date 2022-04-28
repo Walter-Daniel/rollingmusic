@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,35 +41,61 @@
           <div class="container-fluid bg">
                   <div class="container-register">
                     <div class="login-flex">
-                      <form class="shadow vidrio needs-validation" novalidate id="formRegister" onsubmit="userRegister(event)">
-                        <h2>Registrate</h2>
-                        <div class="mb-3 register-form">
+                      <form class="row shadow vidrio needs-validation" novalidate id="formRegister" onsubmit="userRegister(event)">
+                        <h2>Registrarse</h2>
+                        <div class="col-sm-12 col-md-6 mb-3 register-form">
                           <label for="firstName" class="form-label">Nombre(s):</label>
                           <input type="text" class="form-control" id="firstName" name="firstName" minlength="3" maxlength="20" required>
                           <!-- mensaje de validación -->
                           <div class="invalid-feedback"> Por favor, complete este campo.</div>
                         </div>
-                        <div class="mb-3 register-form ">
+                        <div class="col-sm-12 col-md-6  mb-3 register-form ">
                           <label for="surname" class="form-label">Apellido(s):</label>
                           <input type="text" class="form-control" id="surname" name="surname" min="3" maxlength="20" required>
                           <div class="invalid-feedback"> Por favor, complete este campo.</div>
                         </div>
-                        <div class="mb-3 register-form">
+                        <div class="col-sm-12 col-md-6   mb-3 register-form ">
+                          <label for="nickname" class="form-label">Usurario:</label>
+                          <input type="text" class="form-control" id="nickname" name="nickname" min="3" maxlength="20" required>
+                          <div class="invalid-feedback"> Por favor, complete este campo.</div>
+                        </div>
+                        <div class="col-sm-12 col-md-6   mb-3 register-form">
                           <label for="email" class="form-label">Correo Electrónico:</label>
                           <input type="email" class="form-control" id="email" name="email" required>
                           <div class="invalid-feedback"> Por favor, complete este campo.</div>
                         </div>
-                        <div class="mb-3 register-form ">
+                        <div class="col-sm-12 col-md-6   mb-3 register-form ">
                           <label for="password" class="form-label">Contraseña:</label>
                           <input type="password" class="form-control" id="password" name="password" minlength="6" maxlength="9" required>
                           <div class="invalid-feedback"> Por favor, complete este campo.</div>
                         </div>
-                        <div class="mb-3 register-form ">
+                        <div class="col-sm-12 col-md-6   mb-3 register-form ">
                           <label for="passwordConfirm" class="form-label">Confirmar contraseña:</label>
                           <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" minlength="6" maxlength="9" required>
                           <div class="invalid-feedback"> Por favor, complete este campo.</div>
-                        <span id="form-error"></span>
                         </div>
+                        <p>Género</p>
+                        <div class="flex-gender">
+                          <div class="col-sm-6 col-lg-3  form-check">
+                            <input type="radio" class="form-check-input" id="man" name="gender" value="man" checked required>
+                            <label class="form-check-label" for="validationFormCheck2">Hombre</label>
+                          </div>
+                          <div class="col-sm-6 col-lg-3  form-check">
+                            <input type="radio" class="form-check-input" id="woman" name="gender" value="woman" required>
+                            <label class="form-check-label" for="validationFormCheck2">Mujer</label>
+                          </div>
+                          <div class="col-sm-6 col-lg-3  form-check">
+                            <input type="radio" class="form-check-input" id="nonBinary" name="gender" value="nonBinary" required>
+                            <label class="form-check-label" for="validationFormCheck3">No binario</label>
+                          </div>
+                          <div class="col-sm-6 col-lg-3  form-check">
+                            <input type="radio" class="form-check-input" id="other" name="gender" value="other" required>
+                            <label class="form-check-label" for="validationFormCheck3">Otro</label>
+                            <div class="invalid-feedback">Selecciona una opción</div>
+                          </div>
+                          
+                        </div>
+                        <div class="text-center" id="form-error"></div>
                         <div class="col py-3 d-flex justify-content-evenly ">
                           <button class="col-5 btn btn-secondary" id="cancelRegister">Cancelar</button>
                           <button type="submit" class="col-5 btn btn-principal ms-3" id="send">Enviar</button>

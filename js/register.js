@@ -14,6 +14,10 @@ console.log(users);
 
 function userRegister(e) {
     e.preventDefault();
+    if(!userRegisterForm.checkValidity() ) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
     const element = e.target.elements;
     const email = element.email.value;
 
@@ -31,8 +35,10 @@ function userRegister(e) {
     const user = {
         firstName: element.firstName.value,
         surname: element.surname.value,
+        nickname: element.nickname.value,
         email: element.email.value,
         password: element.password.value,
+        gender: element.gender,
         id: Date.now(),
         createdAt: new Date(),
         role: 'CLIENT'
@@ -42,13 +48,9 @@ function userRegister(e) {
     console.log(users);
     localStorage.setItem('users', JSON.stringify(users))
     users = JSON.parse(localStorage.getItem('users'))
-    console.log(users)
+    console.dir(users)
    
 };
-
-function renderUser(){
-    const users = JSON.parse(localStorage.getItem('users'));
-}
 
 
 
@@ -58,19 +60,3 @@ function showErrorMsg(message, time = 3000){
         errorMSG.textContent = null;
     }, time)
 }
-
-// cancelRegister.addEventListener('click', () => {
-//     userRegisterForm.reset()
-// });
-
-// function validation(input){
-//     if(!input.value){
-//         showErrorMsg('Completar el campo!')
-//         input.focus();
-//     }
-// }
-
-//borrar los mensajes de validacion 
-//crear una clase "input" y agregarla al comienzo getelementbyclass
-//pagina 181
-//este correo electronico ya esta en uso

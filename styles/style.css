@@ -39,7 +39,7 @@ h1, h2, h3 {
     color: #ffffff;
     background-color: #9f01e9;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .btn-secondary {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -47,7 +47,7 @@ h1, h2, h3 {
     padding: 0.7rem 2rem;
 }
 .btn-secondary:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 
@@ -126,7 +126,7 @@ h1, h2, h3 {
 }
 /* REGISTRO*/
 .container-register {
-    height: 47rem;
+    height: 65rem;
 }
 @media (min-width: 480px) { 
     .container-register {
@@ -138,7 +138,20 @@ h1, h2, h3 {
         height: 65rem;
     }   
 }
-.register-form input {
+.login-flex .row {
+    width: 100%;
+}
+@media (min-width: 480px) { 
+    .login-flex .row {
+        width: 70%;
+    }
+}
+@media (min-width: 992px) { 
+    .login-flex .row {
+        width: 50%;
+    }
+}
+/* .register-form input {
     width: 15rem;
 }
 @media (min-width: 320px) { 
@@ -155,11 +168,35 @@ h1, h2, h3 {
     .register-form input{
         width: 25rem;
     }   
-}
-.register-form span {
+} */
+/* .register-form span {
     
     width: 100%;
     margin-top: 0.25rem;
     font-size: .875em;
+    color: #01d6fb;
+} */
+
+.flex-gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 576px) { 
+    .flex-gender {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+#form-error {
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #01d6fb;
+}
+.form-check-input.is-invalid, .was-validated .form-check-input:invalid {
+    border-color: #01d6fb;
+}
+.form-check-input.is-invalid~.form-check-label, .was-validated .form-check-input:invalid~.form-check-label {
     color: #01d6fb;
 }
