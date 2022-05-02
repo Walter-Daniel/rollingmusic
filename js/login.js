@@ -86,22 +86,26 @@ formLogin.addEventListener('submit', (event) => {
     if(!user || user.password !== passwordLogin ) {
         return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
     }
-
-    if(role === user.role.value){
-        localStorage.setItem('currentUser', JSON.stringify(user))
-        Swal.fire(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-          )
-        formLogin.reset();
-        checkIsAuth();
-        window.location.href = '/index.html'
+   
+    if(role === user.role){
+        if(user.role === 'CLIENT'){
+            localStorage.setItem('currentUser', JSON.stringify(user))
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+              )
+            formLogin.reset();
+            checkIsAuth();
+            window.location.href = '/index.html'
+        }else {
+            localStorage.setItem('administrator', JSON.stringify(user))
+            formLogin.reset();
+            adminCheck();
+            window.location.href = '/music.html'
+        }         
     }else {
-        localStorage.setItem('administrator', JSON.stringify(user))
-        formLogin.reset();
-        adminCheck();
-        window.location.href = '/music.html'
+        return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
     }
     
 });

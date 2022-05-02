@@ -208,7 +208,8 @@ h1, h2, h3 {
         flex-wrap: wrap;
     }
 }
-#form-error {
+#form-error,
+#loginError {
     margin-top: 0.25rem;
     font-size: .875em;
     color: #01d6fb;
