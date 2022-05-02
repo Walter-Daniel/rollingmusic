@@ -124,6 +124,25 @@ h1, h2, h3 {
         width: 25rem;
     }   
 }
+.dnone {
+    display: none;
+}
+/* modal */
+.modal-content {
+    padding: 1rem;
+}
+.modal-bg {
+    background: #0E003B;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-footer {
+    border-top: none;
+}
+.modal-body input {
+    color: #ffffff;
+}
 /* REGISTRO*/
 .container-register {
     height: 65rem;
@@ -135,7 +154,7 @@ h1, h2, h3 {
 }
 @media (min-width: 1024px) { 
     .container-register {
-        height: 65rem;
+        height: 100vh;
     }   
 }
 .login-flex .row {
@@ -200,3 +219,4 @@ h1, h2, h3 {
 .form-check-input.is-invalid~.form-check-label, .was-validated .form-check-input:invalid~.form-check-label {
     color: #01d6fb;
 }
+
