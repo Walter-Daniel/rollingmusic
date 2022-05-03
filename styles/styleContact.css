@@ -7,10 +7,11 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: cover
+    background-size: cover;
+    margin-top: 5rem;
 }
 .contact-container > .row {
-    height: 100vh;
+    height: 100%;
 }
 .contact-flex{
     margin:  0 auto;
