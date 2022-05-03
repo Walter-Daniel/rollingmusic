@@ -1,6 +1,6 @@
-/* .body-contact {
+.body-contact {
     min-height: 100vh;
-} */
+}
 .contact-container {
     background-image: url(/assets/img/3658899.jpg);
     background-position: center;
@@ -61,6 +61,11 @@
     bottom: 2.5rem;
 } */
 @media (max-width: 672px) { 
+    .bases {
+        /* height: 2rem; */
+        /* margin-bottom: 1rem; */
+        margin-top: -1.8rem;
+    }
     .contact-check-label {
         font-size: 10px;
         margin-top: 10px;

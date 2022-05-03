@@ -4,33 +4,40 @@ const contactForm = document.getElementById('contactForm')
 const messageSent = document.getElementById('messageSent')
 let nameContact = document.getElementById('name-contact')
 let surnameContact = document.getElementById('surname-contact')
+let emailContact = document.getElementById('email-contact')
+let messageContact = document.getElementById('message-contact')
 
-
-sendContact.addEventListener('click', (event) => {
-    event.preventDefault()
-    const contactUser = {
-        nameContact: contactForm.elements.name.value,
-        surnameContact: contactForm.elements.surname.value,
-        emailContact: contactForm.elements.email.value,
-        messageContact: contactForm.elements.message.value,
-        
+contactForm.addEventListener('submit', (e) =>{
+    if(!contactForm.checkValidity()) {
+        e.preventDefault();
+        swal({
+                    title: "Error",
+                    text: 'Verifique si el formulario se completo correctamente',
+                    icon: 'error',
+                    timer: 2000,
+                })
+                contactForm.reset()
+                console.log('error')
+    } else {
+            e.preventDefault()
+            params = {
+                to_name: `${nameContact.value} ${surnameContact.value}`,
+                from_name: `${emailContact.value}`,
+                message: `${messageContact.value}`,
+            }
+            emailjs.send('service_k1a41ak', 'template_borb44l', params)
+            swal({
+                title: "Enviado",
+                text: 'Su mensaje se envió correctamente',
+                icon: 'success',
+                timer: 2000,
+            })
+            contactForm.reset()
+            console.log('enviado')
     }
-    localStorage.setItem('currentContactUser', JSON.stringify(contactUser))  
-    showMessageSent()
-    contactForm.reset()
 })
 
-
-
-function showMessageSent(message, element, time) {
-    messageSent.innerText = 'Su mensaje se envio correctamente';
-    setTimeout(() => {
-        messageSent.innerText = null
-    }, 2000)   
-}
-
-
-cancelContact.addEventListener('click',(event) => {
+cancelContact.addEventListener('click', (event) => {
     event.preventDefault()
     contactForm.reset()
 })
