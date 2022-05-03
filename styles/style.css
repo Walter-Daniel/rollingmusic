@@ -1,3 +1,63 @@
+/* NAVBAR */
+nav li{
+    width: 100%;
+}
+ nav li a{
+    color: #ffffff;
+    font-weight: 600;
+}
+nav a, span{
+    color: #ffffff !important;
+    font-weight: 700;
+}
+nav .show{
+    background-color: var(--bs-bg-color) !important;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.navbar-toggler{
+    color: rgba(0,0,0,0.1) !important;
+}
+nav li:hover {
+    background-color: var(--bs-bg-colorFocus);
+    border-radius: 5px;
+    width: 100%;
+}
+.navbar.active{
+    background-color: var(--bs-bg-color);
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+.navbar-nav{
+    align-items: center;
+}
+
+/* HEADER  */
+header{
+    background-image: url(/assets/pagPrincipal/bg-principal.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh !important;
+} 
+.imgDestacada{
+    height: 70vh;
+    width: 70%;
+    position: absolute;
+    top: 5em;
+    right: 0;
+}
+.destacadoDeLaSemana{
+    position: absolute;
+    background: rgba(135, 105, 206,0.5);
+    top:10em;
+    left: 2em;
+}
+/* OTROS */
 *{
     margin: 0;
     padding: 0;
@@ -25,9 +85,6 @@ nav {
     flex-direction: column;
     justify-content: center;
    
-}
-@media (min-width: ) { 
-    
 }
 .row h2 {
     margin-bottom: 2rem;
