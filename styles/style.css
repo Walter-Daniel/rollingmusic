@@ -51,7 +51,7 @@ nav li:hover {
 }
 
 /* HEADER  */
-header{
+body{
     background-image: url(/assets/pagPrincipal/bg-principal.png);
     background-size: cover;
     background-attachment: fixed;
@@ -68,12 +68,24 @@ header{
     right: 0;
 }
 .destacadoDeLaSemana{
-    position: absolute;
     background: rgba(135, 105, 206,0.5);
+
+}
+.destacadoContainer{
+    position: absolute;
     top:10em;
     left: 2em;
+    display: flex;
+    flex-direction: column;
+
 }
 
+.btn-principal{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
 
 /* CARROUSEL DE DESTACADOS */
 .imgDestacados{
