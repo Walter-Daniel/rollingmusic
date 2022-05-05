@@ -52,14 +52,7 @@ function adminCheck(){
         loginMSG.classList.remove('dnone')
         adminMusic.classList.remove('dnone')
         adminUsers.classList.remove('dnone')
-    }else{
-        loginSection.classList.remove('dnone')
-        login.classList.remove('dnone')
-        logout.classList.add('dnone')
-        loginMSG.classList.add('dnone')
-        adminMusic.classList.add('dnone')
-        adminUsers.classList.add('dnone')
-    }   
+    } 
 }
 
 
@@ -76,7 +69,6 @@ formLogin.addEventListener('submit', (event) => {
     
     const emailLogin = formLogin.elements.emailLogin.value;
     const passwordLogin =  formLogin.elements.passwordLogin.value;
-    const role = formLogin.elements.role.value;
    
     const user = users.find(usr => {
         return usr.email === emailLogin
@@ -85,9 +77,9 @@ formLogin.addEventListener('submit', (event) => {
 
     if(!user || user.password !== passwordLogin ) {
         return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
-    }
+    };
    
-    if(role === user.role){
+    
         if(user.role === 'CLIENT'){
             localStorage.setItem('currentUser', JSON.stringify(user))
             Swal.fire(
@@ -98,15 +90,17 @@ formLogin.addEventListener('submit', (event) => {
             formLogin.reset();
             checkIsAuth();
             window.location.href = '/index.html'
-        }else {
+        }else if(user.role === 'ADMIN'){
             localStorage.setItem('administrator', JSON.stringify(user))
             formLogin.reset();
             adminCheck();
             window.location.href = '/music.html'
-        }         
-    }else {
-        return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
-    }
+        }else{
+            return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
+        }      
+    
+        
+    
     
 });
 

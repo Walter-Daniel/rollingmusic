@@ -29,11 +29,11 @@ console.log(users);
 
 
 
-// formRegister.addEventListener('submit', (e) => {
-    function userRegister(e) {
+    
+    formRegister.addEventListener('submit', (e) => {
 
         e.preventDefault();
-        if(userRegisterForm.checkValidity() === false) {
+        if(formRegister.checkValidity() === false) {
             console.log(`Formulario no válido`)
             e.stopPropagation();
             return
@@ -66,18 +66,38 @@ console.log(users);
             createdAt: new Date(),
             role: 'CLIENT',
         };
-
-        Swal.fire(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-          )
-
         users.push(user)
         localStorage.setItem('users', JSON.stringify(users))
         users = JSON.parse(localStorage.getItem('users'))
-        userRegisterForm.reset()
-    };
+        formRegister.reset()
+        Swal.fire(
+            'Cuenta creada',
+            'Te enviaremos a tu mail el enlance de confirmación.',
+            'success'
+          )
+    });
+
+cancelRegister.addEventListener('click', ()=> {
+    Swal.fire({
+        title: 'Estás seguro?',
+        text: "Tus datos se borraran y no se podran recuperar.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, borralos'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Borrados',
+            'Tus datos fueron eliminados del formulario.',
+            'success'
+          )
+          formRegister.reset()
+        }
+      })
+    
+})
 
 
 

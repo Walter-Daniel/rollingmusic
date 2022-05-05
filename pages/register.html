@@ -41,7 +41,7 @@
           <div class="container-fluid bg">
                   <div class="container-register">
                     <div class="login-flex">
-                      <form class="row shadow vidrio needs-validation" novalidate id="formRegister" onsubmit="userRegister(event)">
+                      <form class="row shadow vidrio needs-validation" novalidate id="formRegister">
                         <h2>Registrarse</h2>
                         <div class="col-sm-12 col-md-6 mb-3 register-form">
                           <label for="firstName" class="form-label">Nombre(s):</label>
@@ -92,10 +92,9 @@
                         </div>
                         <div class="text-center" id="form-error"></div>
                         <div class="container-btn py-3 ">
-                          
-                           
-                              <button class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 btn btn-secondary text-center">Cancelar</button>
-                              <button type="submit" class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 btn     btn-principal">Enviar</button>
+
+                              <button class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 btn btn-secondary text-center" id="cancelRegister">Cancelar</button>
+                              <button type="submit" class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 btn btn-principal ms-lg-2">Enviar</button>
                             
                           
                         </div>
