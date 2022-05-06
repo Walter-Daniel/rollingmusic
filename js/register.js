@@ -78,9 +78,10 @@ console.log(users);
     });
 
 cancelRegister.addEventListener('click', ()=> {
+    
     Swal.fire({
         title: 'Estás seguro?',
-        text: "Tus datos se borraran y no se podran recuperar.",
+        text: "Tus datos no se podran recuperar.",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
