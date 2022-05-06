@@ -15,6 +15,42 @@ body {
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
+/* NAVBAR */
+nav li{
+    width: 100%;
+}
+ nav li a{
+    color: #ffffff;
+    font-weight: 600;
+}
+nav a, span{
+    color: #ffffff !important;
+    font-weight: 700;
+}
+nav .show{
+    background-color: var(--bs-bg-color) !important;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.navbar-toggler{
+    color: rgba(0,0,0,0.1) !important;
+}
+nav li:hover {
+    background-color: var(--bs-bg-colorFocus);
+    border-radius: 5px;
+    width: 100%;
+}
+.navbar.active{
+    background-color: var(--bs-bg-color);
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+.navbar-nav{
+    align-items: center;
+}
+
 
 /* LOGIN & REGISTRO ***************************************/
 .bg {
