@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+:root{
+    --bs-bg-color: #31186a;
+    --bs-bg-colorFocus: #8769ce;
+}
 
 *{
     margin: 0;
