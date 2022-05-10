@@ -74,49 +74,49 @@ let songsList = [
     {
         artist: 'Campedrinos',
         song: 'Eterno Amor',
-        Album: 'Eterno Amor',
+        album: 'Eterno Amor',
         gender: 'Folclore'
     },
     {
         artist: 'Horacio Guarany',
         song: 'Del Chucaro',
-        Album: 'Horacio Guarany',
+        album: 'Horacio Guarany',
         gender: 'Folclore'
     },
     {
         artist: 'Los Huayra',
         song: 'La noche Sin Tí',
-        Album: 'La Voz del Viento',
+        album: 'La Voz del Viento',
         gender: 'Folclore'
     },
     {
         artist: 'Marama',
         song: 'Ya no Llora',
-        Album: 'Ya no Llora',
+        album: 'Ya no Llora',
         gender: 'Cumbia'
     },
     {
         artist: 'La Fase Buk',
         song: 'Marte',
-        Album: 'Marte',
+        album: 'Marte',
         gender: 'Cumbia'
     },
     {
         artist: 'Matías Valdez',
         song: 'Boleto al Amor',
-        Album: 'Boleto al Amor',
+        album: 'Boleto al Amor',
         gender: 'Cumbia'
     },
     {
         artist: 'Ke Kumbia',
         song: 'Desde Mis Ojos',
-        Album: 'Desde Mis Ojos',
+        album: 'Desde Mis Ojos',
         gender: 'Cumbia'
     },
     {
         artist: 'Migrantes',
         song: 'Hoy Volvi a Verte',
-        Album: 'Hoy Volvi a Verte',
+        album: 'Hoy Volvi a Verte',
         gender: 'Cumbia'
     }
 ];
