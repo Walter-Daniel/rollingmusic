@@ -2,73 +2,73 @@ let songsList = [
     {
         artist: 'Don Osvaldo',
         song: 'Misterios',
-        Album: 'Casi Justicia Social I',
+        album: 'Casi Justicia Social I',
         gender: 'rock'
     },
     {
         artist: 'Intoxicados',
         song: 'Esta Saliendo El Sol',
-        Album: 'No Es Solo Rock Adn Roll',
+        album: 'No Es Solo Rock Adn Roll',
         gender: 'rock'
     },
     {
         artist: 'Las Pastillas del Abuelo',
         song: 'Otra Vuelta de Tuerca',
-        Album: 'Las Pastillas del Abuelo',
+        album: 'Las Pastillas del Abuelo',
         gender: 'rock'
     },
     {
         artist: 'Ciro y los Persas',
         song: 'Mirenla',
-        Album: '27',
+        album: '27',
         gender: 'rock'
     },
     {
         artist: 'Ala Delta',
         song: 'Divididos',
-        Album: 'Acariciando lo Aspero',
+        album: 'Acariciando lo Aspero',
         gender: 'rock'
     },
     {
         artist: 'Harry Styles',
         song: 'As It Was',
-        Album: 'As It Was',
+        album: 'As It Was',
         gender: 'Pop'
     },
     {
         artist: 'TINI',
         song: 'Miénteme',
-        Album: 'Miénteme',
+        album: 'Miénteme',
         gender: 'Pop'
     },
     {
         artist: 'Elton John',
         song: 'Cold Heart',
-        Album: 'Cold Heart',
+        album: 'Cold Heart',
         gender: 'Pop'
     },
     {
         artist: 'Maluma',
         song: 'Hawái',
-        Album: 'Hawái',
+        album: 'Hawái',
         gender: 'Pop'
     },
     {
         artist: 'Madonna',
         song: 'Material Girl',
-        Album: 'Madonna',
+        album: 'Madonna',
         gender: 'Pop'
     },
     {
         artist: 'Chaqueño Palavecino',
         song: 'La Ley y La Trampa',
-        Album: 'La Ley y La Trampa',
+        album: 'La Ley y La Trampa',
         gender: 'Folclore'
     },
     {
         artist: 'Soledad',
         song: 'Propiedad Privada',
-        Album: 'Soledad',
+        album: 'Soledad',
         gender: 'Folclore'
     },
     {
