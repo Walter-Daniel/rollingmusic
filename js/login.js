@@ -23,7 +23,7 @@ const LoginError = document.querySelector('#LoginError')
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
 
-checkIsAuth()
+checkIsAuth();
 function checkIsAuth(){
     user = JSON.parse(localStorage.getItem('currentUser'));
     if(user){
@@ -42,7 +42,7 @@ function checkIsAuth(){
         adminUsers.classList.add('dnone')
     } 
 };
-adminCheck()
+adminCheck();
 function adminCheck(){
     admin = JSON.parse(localStorage.getItem('administrator'));
     if(admin){
@@ -53,7 +53,7 @@ function adminCheck(){
         adminMusic.classList.remove('dnone')
         adminUsers.classList.remove('dnone')
     } 
-}
+};
 
 
 logout.addEventListener('click', () => {
@@ -94,7 +94,7 @@ formLogin.addEventListener('submit', (event) => {
             localStorage.setItem('administrator', JSON.stringify(user))
             formLogin.reset();
             adminCheck();
-            window.location.href = '/music.html'
+            window.location.href = '/pages/adminMusic.html'
         }else{
             return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
         }      
