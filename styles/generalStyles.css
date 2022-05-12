@@ -2,6 +2,8 @@
 :root{
     --bs-bg-color: #31186a;
     --bs-bg-colorFocus: #8769ce;
+    --bs-bg-colorlinks: #EB0CEB;
+    --bs-bg-colorHover: #9f01e9;
 }
 
 *{
@@ -54,25 +56,12 @@ nav li:hover {
 .navbar-nav{
     align-items: center;
 }
-
-
-/* LOGIN & REGISTRO ***************************************/
-.bg {
-    background-image: url(/assets/img/5269961.jpg); 
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-}
-
 .btn-principal  {
     padding: 0.7rem 2rem;
-    /* margin-top: 1rem; */
     font-weight: bold;
     color: #ffffff;
     transition: 0.6s;
-    background-color: #EB0CEB;
+    background-color: var(--bs-bg-colorlinks);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
@@ -84,7 +73,7 @@ nav li:hover {
 
 .btn-principal:hover {
     color: #ffffff;
-    background-color: #9f01e9;
+    background-color: var(--bs-bg-colorHover);
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
 }
@@ -97,10 +86,8 @@ nav li:hover {
     transform: scale(1.05);
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
-
-
 .shadow {
-    box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+    box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.5) !important;
 }
 .vidrio {
     background: rgba(255, 255, 255, 0.2);
@@ -110,6 +97,18 @@ nav li:hover {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+
+
+/* LOGIN & REGISTRO ***************************************/
+.bg-login {
+    background-image: url(/assets/img/5269961.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
 .invalid-feedback {
     color: #01d6fb;
 }
@@ -117,9 +116,8 @@ nav li:hover {
     border-color: #01d6fb;
 }
 .link-form a{
-    
     font-weight: bold;
-    color: #EB0CEB;
+    color: var(--bs-bg-colorlinks);
 }
 
 
@@ -388,7 +386,7 @@ nav li:hover {
     color: #ffffff;
 }
 .pages-footer li a:hover {
-    color: #EB0CEB;
+    color: var(--bs-bg-colorlinks);
 }
 /* ERROR */
 .container-error {
@@ -408,7 +406,7 @@ nav li:hover {
     text-transform: uppercase;
 }
 .text-error a {
-    color: #EB0CEB;
+    color: var(--bs-bg-colorlinks);
     text-decoration: none;
 }
 
