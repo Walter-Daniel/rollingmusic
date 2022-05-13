@@ -40,17 +40,19 @@ modalIngresos.addEventListener('submit', (e) => {
         code: new Date()
     }
     console.log(song)
-    localStorage.setItem('song', JSON.stringify(songs))
+    localStorage.setItem('song', JSON.stringify(song))
     formSong.reset()
     renderSong()
+    
 })
 
 closeModal.addEventListener('click', (event) => {
     event.preventDefault()
     formSong.reset()
 })
-songs = JSON.parse(songs)
-console.log(songs)
+
+song = JSON.parse(song)
+console.log(song)
 
 function renderSong() {
     const songs = JSON.parse(localStorage.getItem('songs')) || [];
