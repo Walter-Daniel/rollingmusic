@@ -109,8 +109,8 @@
     <div class="container-fluid administracion mt-5">
       <h1 class="titulo">ADMINISTRAR PRODUCTOS</h1>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalIngresos">
-        Nuevos Ingresos
+      <button type="button" class="btn btn-ingresos d-flex" data-bs-toggle="modal" data-bs-target="#modalIngresos">
+        <p>Nuevos Ingresos</p>
       </button>
 
       <!-- Modal -->
@@ -119,87 +119,70 @@
         <div class="modal-dialog" id="modalIngresos">
           <form class="modal-content" id="formSong">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Nuevas canciones</h5>
+              <h5 class="modal-title" id="staticBackdropLabel">NUEVA CANCION</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modalIngresos-body p-4">
-              <!-- <div class="d-flex justify-content-between mb-3">
-                        <label for="code">Código:</label>
-                        <input type="text" id="code" required>
-                    </div>  -->
               <div class="d-flex justify-content-between mb-3">
                 <label for="nameSong">Nombre:</label>
-                <input name="nameSong" type="text" id="nameSong" required>
+                <input name="nameSong" type="text" id="nameSong" minlength="3" maxlength="30" required>
               </div>
               <div class="d-flex justify-content-between mb-3">
                 <label for="artist">Banda:</label>
-                <input name="artist" type="text" id="artist" required>
+                <input name="artist" type="text" id="artist" minlength="3" maxlength="30" required>
               </div>
               <div class="d-flex justify-content-between mb-3">
-                <label for="album">Album</label>
-                <input name="album" type="text" id="album" required>
+                <label for="album">Album:</label>
+                <input name="album" type="text" id="album" minlength="3" maxlength="30" required>
               </div>
               <div class="d-flex justify-content-between mb-3">
-                <label for="gen">Género</label>
+                <label for="gen">Género:</label>
                 <select name="gen" class="form-select form-select-sm" aria-label=".form-select-sm example" id="gen"
                   required>
                   <option selected>Seleccione una opción</option>
-                  <option value="1">Rock</option>
-                  <option value="2">Pop</option>
-                  <option value="3">Folklore</option>
-                  <option value="4">Cumbia</option>
-                  <option value="5">Otro</option>
+                  <option value="Rock">Rock</option>
+                  <option value="Pop">Pop</option>
+                  <option value="Folklore">Folklore</option>
+                  <option value="Cumbia">Cumbia</option>
+                  <option value="Otro">Otro</option>
                 </select>
               </div>
               <div class="d-flex justify-content-between mb-3">
                 <label for="year">Año:</label>
-                <input name="year" type="number" id="year" required>
+                <input name="year" type="number" id="year" minlength="4" maxlength="4" required>
               </div>
               <div class="d-flex justify-content-between mb-3">
-                <label for="img-song" class="form-label">Imagen</label>
+                <label for="img-song" class="form-label">Imagen:</label>
                 <input name="img-song" id="img-song" type="text" class="form-control" placeholder="url" required>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">Cerrar</button>
-              <button type="submit" class="btn btn-primary btn-ingresos">Guardar Cambios</button>
+              <button type="submit" class="btn btn-primary btn-ingresos btnModal">Guardar Cambios</button>
             </div>
           </form>
         </div>
       </div>
-    </div>
-    <ul id="songsList" class="songsList"></ul>
-    <!-- <div class="container-fluid tabla">
+    </div> 
+    <div class="container-fluid tabla">
       <table class="table">
         <thead>
-          <tr>
-            <th scope="col">Código</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Album</th>
-            <th scope="col">Género</th>
+          <tr class="header-table">
+            <th scope="col">IMAGEN</th>
+            <th scope="col">CODIGO</th>
+            <th scope="col">NOMBRE</th>
+            <!-- <th scope="col">ARTISTA</th> -->
+            <th scope="col">ALBUM</th>
+            <th scope="col">GENERO</th>
+            <th scope="col">AÑO</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        <tbody class="text-light" id="songsList">
         </tbody>
       </table>
-    </div> -->
+    </div>
+   
+  
   </main>
   <footer>
 
