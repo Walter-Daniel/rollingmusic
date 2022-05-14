@@ -28,9 +28,12 @@ const imgSong = document.getElementById('img-song')
 const closeModal = document.getElementById('closeModal')
 const songsList = document.getElementById('songsList')
 
+
+let songs = JSON.parse(localStorage.getItem('songs')) || [];
+
 modalIngresos.addEventListener('submit', (e) => {
     e.preventDefault()    
-    song = {
+    const song = {
         nameSong: element.nameSong.value,
         artist: element.artist.value,
         album: element.album.value,
@@ -39,35 +42,35 @@ modalIngresos.addEventListener('submit', (e) => {
         // imgSong: element.imgSong.value,
         code: new Date()
     }
-    console.log(song)
-    localStorage.setItem('song', JSON.stringify(songs))
+    songs.push(song)
+    localStorage.setItem('songs', JSON.stringify(songs))
     formSong.reset()
     renderSong()
+    Swal.fire(
+        'Guardada!',
+        'Se ha cargado la canción correctamente',
+        'success'
+      )
 })
 
 closeModal.addEventListener('click', (event) => {
     event.preventDefault()
-    formSong.reset()
+    formSong.reset() 
 })
-songs = JSON.parse(songs)
-console.log(songs)
 
 function renderSong() {
     const songs = JSON.parse(localStorage.getItem('songs')) || [];
     songsList.innerHTML = ''
     songs.forEach(song => {
-        songsList.innerHTML += `<li>
-                // <img class="avatar" src=${user.avatar.includes('http') ? user.avatar : '/assets/image/users/default-avatar.png'}></div>
-                <div class="data">
-                    <div  class="nameSong"> ${songs.nameSong}</div>
-                    <div  class="artist"> ${songs.artist}</div>   
-                </div>
-                <div class="data">
-                    <div  class="album"> ${songs.album}</div>  
-                    <div class="year">${songs.year}</div>
-                </div>
-                <div class="gen">${songs.gen}</div>
-                <div class="code">${songs.code}</div>
-                </li>`
+        songsList.innerHTML += `
+                <tr>
+            <td>${song.code}</td>
+            <td>${song.nameSong}</td>
+            <td>${song.artist}</td>
+            <td>${song.album}</td>
+            <td>${song.gen}</td>
+            <td>${song.year}</td>
+          </tr>`
     })
 }
+renderSong();

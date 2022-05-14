@@ -144,10 +144,10 @@
                 <select name="gen" class="form-select form-select-sm" aria-label=".form-select-sm example" id="gen"
                   required>
                   <option selected>Seleccione una opción</option>
-                  <option value="1">Rock</option>
-                  <option value="2">Pop</option>
-                  <option value="3">Folklore</option>
-                  <option value="4">Cumbia</option>
+                  <option value="rock">Rock</option>
+                  <option value="pop">Pop</option>
+                  <option value="folklore">Folklore</option>
+                  <option value="cumbia">Cumbia</option>
                   <option value="5">Otro</option>
                 </select>
               </div>
@@ -168,38 +168,24 @@
         </div>
       </div>
     </div>
-    <ul id="songsList" class="songsList"></ul>
-    <!-- <div class="container-fluid tabla">
+    <ul  class="songsList"></ul>
+    <div class="container-fluid tabla">
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Código</th>
             <th scope="col">Nombre</th>
+            <th scope="col">Artista</th>
             <th scope="col">Album</th>
             <th scope="col">Género</th>
+            <th scope="col">Año</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        <tbody id="songsList">
+          
         </tbody>
       </table>
-    </div> -->
+    </div>
   </main>
   <footer>
 
