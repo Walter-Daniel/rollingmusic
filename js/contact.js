@@ -25,7 +25,7 @@ contactForm.addEventListener('submit', (e) =>{
                 from_name: `${emailContact.value}`,
                 message: `${messageContact.value}`,
             }
-            emailjs.send('service_k1a41ak', 'template_borb44l', params)
+            emailjs.send('service_8tx8en8', 'template_9orh3rc', params)
             swal({
                 title: "Enviado",
                 text: 'Su mensaje se envió correctamente',
