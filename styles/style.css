@@ -171,9 +171,6 @@ body{
     
 }
 /* MENU APAREZCA CUANDO CRECE  */
-.navbar-toggler{
-    z-index: 1 !important;
-}
 .row h2 {
     margin-bottom: 2rem;
     text-align: left;

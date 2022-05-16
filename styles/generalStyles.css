@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
 :root{
-    --bs-bg-color: #31186a;
+    --bs-bg-color: #0E003B;
     --bs-bg-colorFocus: #8769ce;
     --bs-bg-colorlinks: #EB0CEB;
     --bs-bg-colorHover: #9f01e9;
@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #0E003B;
+    background-color: var(--bs-bg-color);
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
 }
