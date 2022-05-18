@@ -23,20 +23,23 @@
     <link rel="stylesheet" href="/styles/generalStyles.css">
     <link rel="stylesheet" href="/styles/stylesLogin.css">
     <link rel="stylesheet" href="/styles/stylesAdminUser.css">
+    
 </head>
 <body>
     <header></header>
     <main>
-        <h2>Administración de Usuarios</h2>
-        <div class="container vidrio">
+        <h2 class="text-center my-3">Administración de Usuarios</h2>
+        <div class="container vidrio mt-1">
             <div class="table-responsive">
               <table class="table table-color">
                 <thead>
                   <tr>
-                    <th scope="col">Estado</th>
                     <th scope="col">Nombre(s)</th>
                     <th scope="col">Apellido(s)</th>
                     <th scope="col">Email</th>
+                    <th scope="col" class="text-center">Rol</th>
+                    <th scope="col" class="text-center">Validación</th>
+                    <th scope="col" class="text-center">Estado</th>
                   </tr>
                 </thead>
                 <tbody id="user-table">        
@@ -44,7 +47,9 @@
               </table>
             </div>
         </div>
+        <button type="submit"></button>
     </main>
+    <a href="/pages/error.html"></a>
     <footer>
         
         <div class="container-fluid">
@@ -89,8 +94,6 @@
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="/js/sweetalert.js"></script>
       <!-- JS individual -->
-      
-
       <script src="/js/adminUser.js"></script>
 </body>
 </html>

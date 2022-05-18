@@ -1,26 +1,40 @@
 //referencia de la tabla
 const userTable = document.querySelector('#user-table');
+const userValidation = document.querySelector('#user-validation');
+const emailValidation = document.querySelector('#email-validation')
 
+//referencia a los botones
+const validationBtn = document.querySelectorAll('#validationBtn');
+const cancelBtn = document.querySelectorAll('#cancelBtn');
 
-
+//traer usuarios del localstorage
+let users = JSON.parse(localStorage.getItem('users'));
 
 function renderUser() {
-    const users = JSON.parse(localStorage.getItem('users'));
+    
     userTable.innerHTML  = '';
     users.forEach(user => {
         userTable.innerHTML += ` <tr>
-        <td>
-            <div class="user-validation d-flex justify-content-around">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Validado</label>
-                </div>
+        <td data-title="Nombre(s)">${user.firstName}</td>
+        <td data-title="Apellido(s)">${user.surname}</td>
+        <td data-title="Email">${user.email}</td>
+        <td data-title="Rol">${user.role}</td>
+        <td data-title="Validación">
+        <div class="user-validation ">
+            <div class="form-check form-switch">
+            <button type="submit" class="btn btn-principal"><a href="/pages/error.html">Alta</a></button>
+            <button  class="btn btn-secondary ms-2"><a href="/pages/error.html">Baja</a></button>
             </div>
-        </td>
-        <td>${user.firstName}</td>
-        <td>${user.surname}</td>
-        <td>${user.email}</td>
+        </div>
+    </td>
+        <td data-title="Estado">
+        <div  class="icon-check">
+        <i class="fa-regular fa-circle-check"></i>
+        </div>
+      </td>
       </tr>`
     });
-}
-renderUser()
+};
+
+renderUser();
+

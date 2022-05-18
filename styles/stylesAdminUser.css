@@ -1,3 +1,18 @@
 .table-color {
     color: #fff;
 }
+
+.btn-principal a {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-secondary a {
+    text-decoration: none;
+    color: #fff;
+}
+.icon-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
