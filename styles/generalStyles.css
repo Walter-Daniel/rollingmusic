@@ -70,6 +70,10 @@ nav li:hover {
         margin-top: 0;
     }
 }
+/* CAROUSEL */
+.img-fluid{
+    height: 100px !important;
+}
 
 .btn-principal:hover {
     color: #ffffff;
@@ -97,7 +101,11 @@ nav li:hover {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
-
+.inputBuscarArtista{
+    background: linear-gradient(106.23deg, rgba(255, 249, 249, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
+}
 
 /* LOGIN & REGISTRO ***************************************/
 .bg-login {
