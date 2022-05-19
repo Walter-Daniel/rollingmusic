@@ -1,12 +1,12 @@
 .administracion {
-    display: inline-flex;
+    display: flex;
     justify-content: space-around;
     /* background-color: #0e003be5; */
     background-image: url(/assets/img/whimsical-orb@3000x2000px.jpg);
     border-radius: 10px;
-    margin: 1rem;
-    margin-right: 1rem;
+    
     padding: 1rem;
+    margin-bottom: 2rem;
     box-shadow: 2px 2px 5px rgba(205, 191, 191, 0.5);
 }
 .modal-title {
@@ -65,7 +65,7 @@
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
-.tabla{
+.bg-adm{
     background-image: url(/assets/img/3569870.jpg);
 }
 .header-table {
