@@ -28,8 +28,6 @@ const imgSong = document.getElementById('img-song')
 const closeModal = document.getElementById('closeModal')
 const songsList = document.getElementById('songsList')
 let songs = JSON.parse(localStorage.getItem('songs')) || [];
-
-
 modalIngresos.addEventListener('submit', (e) => {
     e.preventDefault()
     const song = {
@@ -38,25 +36,24 @@ modalIngresos.addEventListener('submit', (e) => {
         album: element.album.value,
         gen: element.gen.value,
         year: element.year.value,
-        imgSong: element.imgSong.value,
+        // imgSong: element.imgSong.value,
         code: new Date()
     }
     songs.push(song)
     localStorage.setItem('songs', JSON.stringify(songs))
-    formSong.reset()
-    renderSong()
+    formSong.reset();
+    renderSong();
     Swal.fire(
         'Guardada!',
         'Se ha cargado la canción correctamente',
         'success'
-    )
-})
+    );
+});
 closeModal.addEventListener('click', (event) => {
     event.preventDefault()
     formSong.reset()
-})
+});
 
-let number = 1;
 function renderSong() {
     const songs = JSON.parse(localStorage.getItem('songs')) || [];
     songsList.innerHTML = ''
@@ -81,8 +78,7 @@ function renderSong() {
             <button type="button" class="btn btn-ingresos">
             <i class="fa-solid fa-star"></i>
             </button>
-            
-            <button type="button" class="btn btn-ingresos" data-bs-toggle="modal" data-bs-target="#${song.nameSong}">
+            <button type="button" class="btn btn-ingresos">
             <i class="fa-solid fa-pen-to-square"></i>
             </button>
             <button type="button" class="btn btn-ingresos">
@@ -90,9 +86,7 @@ function renderSong() {
             </button>
             </td>
 
-        </tr>
-        
-        `
+        </tr>`
     })
 }
 renderSong();
