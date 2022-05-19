@@ -94,7 +94,7 @@ formLogin.addEventListener('submit', (event) => {
             localStorage.setItem('administrator', JSON.stringify(user))
             formLogin.reset();
             adminCheck();
-            window.location.href = '/music.html'
+            window.location.href = '/pages/adminMusic.html'
         }else{
             return showErrorMsgL('Datos incorrectos, por favor inténtelo de nuevo')
         }      
