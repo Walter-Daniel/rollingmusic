@@ -108,14 +108,7 @@ nav li:hover {
 }
 
 /* LOGIN & REGISTRO ***************************************/
-.bg-login {
-    background-image: url(/assets/img/5269961.jpg); 
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-}
+
 
 .invalid-feedback {
     color: #01d6fb;

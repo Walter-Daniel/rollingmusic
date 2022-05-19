@@ -67,7 +67,7 @@ nav .navbar-collapse.collapse.show{
     height: 90%;
     width: 100%;
 }
-body{
+/* body{
     background-image: url(/assets/pagPrincipal/bg-principal.png);
     background-size: cover;
     background-attachment: fixed;
@@ -75,7 +75,7 @@ body{
     background-position: center;
     width: 100%;
     min-height: 100vh !important;
-}
+} */
 .destacadoImgContainer{
     height: 80vh;
 }

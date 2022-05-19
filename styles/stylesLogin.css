@@ -79,6 +79,9 @@ nav .navbar-collapse.collapse.show{
     justify-content: center;
     
 }
+.dnone {
+    display: none;
+}
 /* MENU APAREZCA CUANDO CRECE  */
 .navbar-toggler{
     z-index: 1 !important;
@@ -96,12 +99,12 @@ nav .navbar-collapse.collapse.show{
     font-weight: bold;
 }
 .login-container {
-    background-image: url(/assets/img/vecteezyneonpinkbackgroundDP05213_generated.jpg);
+    background-image: url(/assets/img/5269961.jpg); 
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
     height: 100%;
-    background-size: cover
+    width: 100%;
+    background-size: cover;
 }
 form {
     padding: 3rem;
@@ -117,4 +120,17 @@ form {
     .d-none-sm-span{
         display: none;
     }
+}
+
+.login-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+.login-msg a{
+  text-decoration: none;
+  color: #EB0CEB;
+  font-weight: bold;
+  font-size: 1.1em;
 }
