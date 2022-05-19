@@ -1,0 +1,25 @@
+.table-color {
+    color: #fff;
+}
+.btn-principal a {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-secondary a {
+    text-decoration: none;
+    color: #fff;
+}
+.icon-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+.bg {
+    background-image: url(/assets/img/5269961.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
